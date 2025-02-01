@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: 90%;
+}
+.product div:nth-child(2) {
+  padding: 1.5rem;
+}
+.product img {
+  transition: 2s ease-in 1s;
+}
+.product:hover img {
+  transform: translateY(20px);
+}
+
+.form-control {
+  border: 1px solid gray;
+}
+
+.filter .form-control {
+  padding: 0.4rem;
+  width: 4rem;
+  text-align: center;
+  background-color: white;
+  outline: none;
+}
+.form-control:focus {
+  outline: none;
+}
+
+.filter select {
+  padding: 0.7rem;
+  border: none;
+  transition: 3s ease-in 1s;
+}
+.filter select:focus {
+  border-radius: 20px;
+  outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Single Prosuct */
+.single-p {
+  padding: 2rem;
+}
+.single-p div:nth-child(2) {
+  padding-inline: 1.2rem;
+}
+@media (max-width: 1025px) {
+  .filter .form-control {
+    width: 100%;
+  }
+  .single-p div:nth-child(2) {
+    margin-inline: 0.5rem;
+  }
+  nav ul {
+    width: 50%;
+    background-color: white;
+    padding: 1.2rem;
+    top: 5rem;
+    right: 0;
+    z-index: 10;
+    height: calc(100vh - 5rem);
+    position: absolute;
+    color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .openmenu {
+    display: flex;
+  }
+}
