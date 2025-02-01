@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
+
 import { Link, useParams } from "react-router-dom";
 import { productdetails } from "../utils/type";
 import { StarRating } from "../components/StarRating";

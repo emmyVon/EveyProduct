@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import { memo, useState } from "react";
 import { Search } from "./Search";
 import { productdetails } from "../utils/type";
 import { IoIosMenu } from "react-icons/io";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { productdetails } from "../utils/type";
 import { CiSearch } from "react-icons/ci";
 
@@ -28,14 +28,14 @@ export const Search = ({
 
       return matchProduct.length > 0 ? matchProduct : arr;
     },
-    [arr]
+    [setproduct]
   );
   useEffect(() => {
     const debounce = setTimeout(() => {
       searchItem(arr, searchterm);
     }, delay);
     return () => clearTimeout(debounce);
-  }, [searchterm, arr]);
+  }, [searchterm, delay, arr, searchItem]);
   return (
     <div className="relative flex-3 w-full">
       <input
