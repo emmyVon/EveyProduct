@@ -1,4 +1,3 @@
-import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { productdetails } from "../utils/type";
 import { Link } from "react-router-dom";

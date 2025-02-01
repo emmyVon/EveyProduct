@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { productdetails } from "../utils/type";
 import { IoIosArrowDown } from "react-icons/io";
 
