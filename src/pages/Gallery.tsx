@@ -1,6 +1,4 @@
 import { productdetails } from "../utils/type";
-
-import { Filter } from "../components/Filter";
 import { Product } from "../components/Product";
 
 interface GalleryProps {
@@ -16,8 +14,6 @@ export const Gallery = ({
   isError,
   error,
   ProductItems,
-  setProduct,
-  data,
 }: GalleryProps) => {
   if (loading)
     return (
@@ -39,12 +35,12 @@ export const Gallery = ({
     );
 
   return (
-    <div className="bg-gray-800 min-h-screen w-screen mt-[5rem]">
+    <div className="bg-gray-800 min-h-screen w-screen">
       <div className="container flex flex-col gap-3 w-full">
         <h2 className="h-10 text-center font-semibold text-xl text-white bg-gray-500">
           Product Inventory
         </h2>
-        <Filter arr={ProductItems} setproduct={setProduct} origin={data} />
+        {/* <Filter arr={ProductItems} setproduct={setProduct} origin={data} /> */}
         <div className=" grid grid-cols-[repeat(auto-fit,minmax(300px,auto))] w-full justify-center gap-4">
           {ProductItems?.map((product) => (
             <Product {...product} key={product.id} />

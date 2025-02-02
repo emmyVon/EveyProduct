@@ -1,19 +1,24 @@
 import { useEffect, useState, useCallback } from "react";
 import { productdetails } from "../utils/type";
 import { CiSearch } from "react-icons/ci";
+import { handleFiltration } from "../utils/Helpers";
 
 export const Search = ({
   delay = 2000,
   arr,
   setproduct,
+  origin,
+  selection,
 }: {
   delay?: number;
-  arr: productdetails[] | null;
+  origin: productdetails[] | undefined;
+  arr: productdetails[] | undefined;
   setproduct: (items: productdetails[]) => void;
+  selection: { category: string; min_price: number; max_price: number };
 }) => {
   const [searchterm, setSearchTerm] = useState("");
   const searchItem = useCallback(
-    (arr: productdetails[] | null, text: string) => {
+    (arr: productdetails[] | undefined, text: string) => {
       console.log(arr);
       if (!arr) return;
       //   if (text.trim() === "") return arr;
@@ -23,12 +28,13 @@ export const Search = ({
           item.title.toLowerCase().includes(text.toLowerCase().trim()) ||
           item.description.toLowerCase().includes(text.toLowerCase().trim())
       );
+      handleFiltration(matchProduct, origin, selection, setproduct);
 
-      setproduct(matchProduct.length > 0 ? matchProduct : arr);
+      // setproduct(matchProduct.length > 0 ? matchProduct : arr);
 
       return matchProduct.length > 0 ? matchProduct : arr;
     },
-    [setproduct]
+    [searchterm]
   );
   useEffect(() => {
     const debounce = setTimeout(() => {

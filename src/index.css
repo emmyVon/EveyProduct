@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
   list-style: none;
   text-decoration: none;
 }
 
+main {
+  max-height: calc(100vh-15rem);
+}
+
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Poppins", sans-serif;
+  max-width: 100vw;
   overflow-x: hidden;
   background-color: #1e2939;
 }
 
-nav a {
+nav ul a {
   transition: 1s ease-in;
 }
 
-nav a:hover {
+nav ul a:hover {
   opacity: 0.7;
   border-bottom: 1px solid rgb(192, 204, 20);
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav div:nth-child(1) {
+  padding: 0.4rem;
 }
 
 .container {
@@ -34,7 +50,7 @@ nav a:hover {
   transition: 1s ease-in;
 }
 .product:hover img {
-  transform: translateY(20px);
+  transform: translateY(10px);
 }
 
 .form-control {
@@ -53,12 +69,10 @@ nav a:hover {
 }
 
 .filter select {
-  padding: 0.7rem;
+  padding: 0.3rem;
   border: none;
-  transition: 2s ease-in 1s;
 }
 .filter select:focus {
-  border-radius: 20px;
   outline: none;
 }
 
@@ -70,6 +84,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Single Prosuct */
 .single-p {
+  max-width: 100vw;
+  overflow-x: hidden;
   padding: 2rem;
 }
 .single-p div:nth-child(2) {
@@ -77,18 +93,31 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 @media (max-width: 1025px) {
   .container {
-    width: 98%;
+    width: 96%;
+  }
+  nav ul a:hover {
+    opacity: 0.7;
   }
   .filter {
-    padding: 0.2rem 0.2rem;
+    width: fit-content;
+    background-color: black;
+    padding: 1.2rem;
+
+    z-index: 1000;
+    height: fit-content;
+    position: absolute;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    font-weight: 600;
   }
   .filter .form-control {
-    width: 100%;
-    padding: 0.3rem;
-    width: 100%;
+    padding: 0;
   }
+
   .filter select {
-    padding: 0.3rem;
+    padding: 2px;
   }
   .filter select::placeholder {
     font-family: 0.2rem;

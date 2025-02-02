@@ -45,8 +45,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <NavBar arr={originalProducts} setproduct={setProduct} />
-      <main style={{ marginTop: "5.5rem" }}>
+      <NavBar arr={originalProducts} setproduct={setProduct} origin={data} />
+      <main>
         <Routes>
           <Route
             path="/"
