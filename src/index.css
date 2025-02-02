@@ -100,17 +100,15 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   .filter {
     width: fit-content;
-    background-color: black;
-    padding: 1.2rem;
-
+    background-color: #4a5565;
     z-index: 1000;
     height: fit-content;
     position: absolute;
-
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
+    border-radius: 0;
   }
   .filter .form-control {
     padding: 0;
@@ -136,10 +134,10 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 50%;
     background-color: black;
     padding: 1.2rem;
-    top: 5rem;
+    top: 0;
     right: 0;
     z-index: 1000;
-    height: calc(100vh - 5rem);
+    height: 100vh;
     position: absolute;
     color: white;
     flex-direction: column;

@@ -12,7 +12,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Starting up Application
 
-To install dependencies run "npm start" in the terminal
+To install dependencies run "npm install" in the terminal
 To start up the Application run "npm run dev" in the terminal
 
 ## Basic Function and Application About

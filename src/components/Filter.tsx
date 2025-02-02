@@ -51,7 +51,7 @@ export const Filter = ({
   }, [selections, arr]);
   return (
     <div>
-      <label className="flex gap-2 text-white lg:hidden">
+      <label className="flex gap-2 bg-gray-600 text-white lg:hidden">
         <p>Filters</p>
         <MdOutlineFilterList onClick={toggleFilter} />
       </label>
