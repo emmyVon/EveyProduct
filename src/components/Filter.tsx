@@ -74,7 +74,8 @@ export const Filter = ({
         <p className="font-semibold text-gray-200">category filter</p>
         <div className="relative">
           <select
-            className="flex-1 outline-none relative appearance-none cursor-pointer  font-medium bg-white border rounded-lg"
+            id="categoryselect"
+            className="flex-1 outline-none relative appearance-none cursor-pointer placeholder:text-sm font-medium bg-white border rounded-lg"
             style={{ paddingRight: "1.4rem" }}
             value={selections.category}
             onChange={(e) =>
@@ -91,12 +92,19 @@ export const Filter = ({
               </option>
             ))}
           </select>
-          <IoIosArrowDown className="absolute top-1/3 right-2" />
+          <label
+            htmlFor="categoryselect"
+            className="absolute top-1/3 right-2 cursor-pointer"
+          >
+            <IoIosArrowDown />
+          </label>
         </div>
       </label>
       <label>
-        <p className="font-semibold text-gray-200">Price Range</p>
-        <div className="flex flex-1 gap-3">
+        <p className="font-semibold text-sm lg:text-lg text-gray-200">
+          Price Range
+        </p>
+        <div className="flex lg:flex-1 flex-2 gap-1">
           <input
             placeholder="Min"
             type="number"

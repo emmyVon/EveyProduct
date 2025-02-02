@@ -46,23 +46,25 @@ const App = () => {
   return (
     <BrowserRouter>
       <NavBar arr={originalProducts} setproduct={setProduct} />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Gallery
-              loading={isLoading}
-              error={error}
-              isError={isError}
-              ProductItems={ProductItems}
-              setProduct={setProduct}
-              data={data}
-            />
-          }
-        />
-        <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/own" element={<ProductDetails />} />
-      </Routes>
+      <main style={{ marginTop: "5.5rem" }}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Gallery
+                loading={isLoading}
+                error={error}
+                isError={isError}
+                ProductItems={ProductItems}
+                setProduct={setProduct}
+                data={data}
+              />
+            }
+          />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/own" element={<ProductDetails />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 };

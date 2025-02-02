@@ -21,7 +21,9 @@ export const Product = ({
         </div>
         <div className="flex flex-1 flex-col items-center justify-end ">
           <p>{category}</p>
-          <p className="text-lg font-semibold opacity-70">{title}</p>
+          <p className="text-sm  text-center font-semibold opacity-70">
+            {title}
+          </p>
           <p className="font-semibold">${price}</p>
           <div className="flex gap-3 items-center">
             <FaStar className="text-yellow-400" />

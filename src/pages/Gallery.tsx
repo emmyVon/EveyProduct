@@ -21,16 +21,16 @@ export const Gallery = ({
 }: GalleryProps) => {
   if (loading)
     return (
-      <p className="h-[90vh] grid place-items-center w-screen font-bold text-2xl">
+      <p className="h-[90vh] text-white opacity-80 grid place-items-center w-screen font-bold text-2xl">
         Loading...
       </p>
     );
 
   if (isError)
     return (
-      <div className="h-[90vh] grid place-items-center w-screen">
+      <div className="h-[90vh] grid text-white place-items-center w-screen">
         <div>
-          <h3 className="font-bold text-2xl">Error fetching data</h3>
+          <h3 className="font-bold text-2xl ">Error fetching data</h3>
           <p className="opacity-80 ">
             {error?.message} <span>check your connection and try again</span>
           </p>
@@ -39,7 +39,7 @@ export const Gallery = ({
     );
 
   return (
-    <div className="bg-gray-800 min-h-screen w-screen">
+    <div className="bg-gray-800 min-h-screen w-screen mt-[5rem]">
       <div className="container flex flex-col gap-3 w-full">
         <h2 className="h-10 text-center font-semibold text-xl text-white bg-gray-500">
           Product Inventory
