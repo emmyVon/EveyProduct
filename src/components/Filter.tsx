@@ -23,11 +23,14 @@ export const Filter = ({
     }>
   >;
 }) => {
+  // Gets all Unique Categorys in products
   const AvailableCategories = origin?.reduce<string[]>((acc, curr) => {
     return !acc.includes(curr.category) ? [...acc, curr.category] : acc;
   }, []);
 
   const [openFilters, setOpenFilters] = useState(false);
+
+  // toggles filter icon on small screen
   const toggleFilter = () => {
     setOpenFilters((prev) => {
       if (prev === true) {
@@ -43,12 +46,15 @@ export const Filter = ({
       }
     });
   };
+
+  // calls filter function after 1seconds
   useEffect(() => {
     const timeout = setTimeout(() => {
       handleFiltration(arr, origin, selections, setproduct);
     }, 1000);
     return () => clearTimeout(timeout);
   }, [selections, arr]);
+
   return (
     <div>
       <label className="flex gap-2 bg-gray-600 text-white lg:hidden">

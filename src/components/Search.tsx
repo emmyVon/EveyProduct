@@ -17,6 +17,8 @@ export const Search = ({
   selection: { category: string; min_price: number; max_price: number };
 }) => {
   const [searchterm, setSearchTerm] = useState("");
+
+  //handles search of items
   const searchItem = useCallback(
     (arr: productdetails[] | undefined, text: string) => {
       console.log(arr);
@@ -36,12 +38,14 @@ export const Search = ({
     },
     [searchterm]
   );
+  // debounce function to delay call of search function
   useEffect(() => {
     const debounce = setTimeout(() => {
       searchItem(arr, searchterm);
     }, delay);
     return () => clearTimeout(debounce);
   }, [searchterm, delay, arr, searchItem]);
+
   return (
     <div className="relative flex-3 w-full">
       <input

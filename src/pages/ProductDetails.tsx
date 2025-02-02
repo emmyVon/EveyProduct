@@ -38,6 +38,7 @@ export const ProductDetails = () => {
         </div>
       </div>
     );
+
   if (data) {
     console.log(data);
     const { title, image, category, price, description, rating } = data;

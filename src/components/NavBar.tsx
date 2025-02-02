@@ -23,8 +23,8 @@ export const NavBar = memo(
       max_price: 1000,
     });
     const location = useLocation();
-
     const isProductsPage = location.pathname === "/";
+
     const toggleMenu = () => {
       if (openMenu) {
         document.body.style.overflow = "scroll";
@@ -33,6 +33,7 @@ export const NavBar = memo(
       }
       setOpenMenu((prev) => !prev);
     };
+
     return (
       <nav className=" w-[100vw] bg-[#171d25]  sticky top-0 z-30 left-0 right-0">
         <div className="bg-black">

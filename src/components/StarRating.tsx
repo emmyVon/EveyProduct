@@ -1,5 +1,5 @@
 import { FaStar, FaRegStarHalfStroke, FaRegStar } from "react-icons/fa6";
-
+// displays stars in productDetail component
 export const StarRating = ({ rating }: { rating: number }) => {
   const [fullStars, decimalPart] = rating
     .toString()
